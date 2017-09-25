@@ -1,0 +1,20 @@
+undirected unweighted
+10
+Sara
+Sam
+Sean
+Ajay
+Mira
+Jane
+Maria
+Rahul
+Sapna
+Rohit
+Sara Ajay
+Sam Sara
+Mira Jane
+Rahul Sapna
+Rohit Sapna
+Sean Sam
+Sam Mira
+Maria Jane

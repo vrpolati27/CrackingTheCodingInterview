@@ -1,0 +1,16 @@
+directed unweighted
+6
+pageA
+pageB
+pageC
+pageD
+pageE
+pageF
+pageA pageB
+pageA pageE
+pageA pageD
+pageC pageA
+pageE pageF
+pageF pageD
+pageD pageB
+pageB pageD

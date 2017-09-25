@@ -1,0 +1,102 @@
+/* complete core java and Advanced Java concepts list.
+   reference:
+   https://www.quora.com/What-is-a-complete-list-of-topics-of-Core-Java-and-topics-of-Advanced-Java*/
+---------------------------------------------------------------------------------------------------------
+1. Introduction
+     . Java Features
+     . JDK (JVM + JRE)
+2. Data types and Operators
+     . Primitive Data types, Declaration and range
+     . variables naming convention
+     . Numeric literals, Character literals
+     . String literals
+     . Arrays
+     . Array of object references
+     . Accessing arrays, manipulating arrays
+     . Enumerated Data types
+     . non-primitive Data types
+     . Defining a class, variable and method in java
+     . method signature and method calls
+     . Expressions in java, introduction to various operators
+     . Assignment operator
+     . relational operators
+     . Logical, conditional operators and
+     . operator precedence
+     . Implicit type conversions
+     . upcasting and downcasting
+     . strict typing
+     . Type conversion
+3. Control Flow statements
+     . if, else and nested if-else
+     . switch case
+     . for (regular and enhanced)
+     . while and do-while
+     . continue, labelled continue
+     . break, labelled break
+     . return statement
+4. OOPS and its application in Java
+     . classes and objects
+     . method calls via object references
+     . Abstraction
+     . Inheritance
+     . extends and implements keywords in Java
+     . super class and subclass
+     . this, super keywords
+     . concrete classes in java
+     . polymorphism.
+     . compile time polymorphism (or overloading) and runtime polymorphism (or overriding)
+     . Object class and its methods
+     . Encapsulation
+     . protection of Data
+     . Java beans, Plain Old Java Object(POJO)
+     . Memory management in Java
+     . Heap, Stack
+5. Packages
+     . Need for packages
+     . package declaration in java
+     . regular import and static import
+     . How do packages resolve name clashes?
+6. Misc
+     . reference variables, local variables and instance variables
+     . constructor chaining
+     . constructors for Enumerated types
+7. Exception Handling
+     . what are Exceptions
+     . Need for exception
+     . API hierarchy for exceptions
+     . Types of Exceptions
+     . custom Exceptions
+
+. Assertions
+. Enabling and disabling assertions in Development environment
+
+8. Java String class
+     . String heap memory and constant pool memory
+     . Immutable classes
+     . String creation on heap nd constant pool
+     . method APIs on String
+     . StringBuilder and StringBuffer
+     . string manipulation
+       Regex, stringTokenizer
+
+9. Collection Framework
+10. Generics
+
+11. Input-output in Java
+      . what is stream?
+      . overview of streams
+      . Bytes vs Characters
+      . Java IO API methods
+      . Reading from console
+12. Serialization
+13. Inner classes
+       . inner classes
+       . Member classes
+       . Local classes
+       . Anonymous classes
+       . Static nested classes
+14. Threads in Java  {Multi threading}
+15. Java Database Connection {JDBC}
+      . CURD operations with JDBC
+      . Statement types in JDBC
+      . Types of Rowset, Resultset in JDBC

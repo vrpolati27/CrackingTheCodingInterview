@@ -1,0 +1,200 @@
+
+ Java IO package
+---------------------
+ 1. File
+ 2. FileWriter
+ 3. FileReader
+ 4. BufferedWriter
+ 5. BufferedReader
+ 6. PrintWriter
+
+import java.io.File;
+
+  File welcome = new File("welcome.txt");
+
+ 1. This Line won't create any physical file, First it will check if there is any physical file
+    already available with "welcome.txt" name or not.
+ 2. If it is already available then this object reference points to that File
+ 3. File f = new File("abc.txt");
+      This line won't create any physical file, it just creates a java File object to
+      reference "abc,txt" if it exists.
+ 4. Java File object is also used to reference Directories.
+
+     File f1 = new File("abc.txt");
+     System.out.println(f1.exists());/* false*/
+     if(!f1.exists()) f1.createNewFile();
+     System.out.println(f1.exists()); /* true*/
+
+     File f2 = new File("dirName");
+     f2.mkdir(); /*make directory*/
+
+import java.io.File
+    File f1 = new File(String filename);
+    File f2 = new File(String subDirectory, String filename);
+    File f3 = new File(File subDirectory, String fileName);
+
+    /* create a new file "abc.txt" in current directory.*/
+    Sting cwd = System.getProperty("user.id");
+    File file = new File(cwd+"/abc.txt");
+        (or)
+        File file = new File("abc.txt");
+    file.createNewFile();
+
+    /* create a Directory in current directory and a File in it.*/
+    File dirRef = new File("subDir");
+    dirRef.mkdir();
+    File f = new File("subDir","welcome.txt");
+       (or)
+       File dirRef = new File("subDir");
+       dirRef.mkdir();
+       File f = new File(dirRef,"welcome.txt");
+       f.createNewFile();
+
+-----------------------------------------
+important methods in java.io.File
+-----------------------------------------------------------------
+1. boolean exists()
+2. boolean createNewFile()
+3. boolean mkdir()
+4. boolean isFile()
+5. boolean isDirectory()
+6. String[] list()
+7. File[] listFiles()
+8. boolean delete()
+
+------------------------------------------------------------------------------------
+java.io.FileWriter; /* used to write Character data(text data) to the file*/
+--------------------------------------------------------------------------
+
+  FileWriter fw1 = new FileWriter(String fileName);
+  FileWriter fw2 = new FileWriter(File fileRef);
+  FileWriter fw3 = new FileWriter(String fileName, boolean append);
+  FileWriter fw4 = new FileWriter(File fileRef, boolean append);
+
+Note: This will create a physical file if a specified file doesn't exist already.
+
+important methods
+-----------------------
+  1. write(int ch);
+  2. write(char[] ch);
+  3. write(String str);
+  4. flush();/* Guarantee that all characters including final
+            char is properly written to the File. */
+  5. close();
+
+------------------------------------------------------------------------------------
+java.io.FileReader; /* used to read Character data(text data) to the file*/
+--------------------------------------------------------------------------
+  FileReader fr = new FileReader(String filename);
+  FileReader fr = new FileReader(File fileref);
+
+important methods
+------------------
+ 1. int read();
+ 2. int read(char[] ch);
+ 3. void close();
+
+ **Note: usage of FileWriter and FileReader is not recommended because,
+ while writing data using FileWriter we have to insert line separators manually which varies
+ from system to system.
+ We can't read data line by line using FileReader.
+
+
+ import java.io.BufferedWriter;
+ ----------------------------------
+  BufferedWriter br = new BufferedWriter(Writer w);
+  BufferedWriter br = new BufferedWriter(Writer w,int buffersize);
+
+  Note: BufferedWriter can't communicate directly with the File, it communicates via some
+  writer object only.
+
+  File file = new File("welcome.txt");
+  FileWriter fw = new FileWriter(file,true);
+  BufferedWriter bw1 = new BufferedWriter(fw);
+  BufferedWriter bw2 = new BufferedWriter(bw1); /* 2 level buffering.*/
+
+important methods
+-------------------
+ 1. write(int ch);
+ 2. write(char[] ch);
+ 3. write(String str);
+ 4. flush();
+ 5. close();
+ 6. newLine(); /* inserts a Line separator*/
+
+ BufferedWriter writer = new BufferedWriter(
+                             new FileWriter(new File("welcome.txt"),true));
+ writer.write('c');
+ char[] ch = {'d','e','f'};
+ writer.write(ch);
+ writer.newLine();
+ writer.write("Hello! Vinay Reddy Polati");
+ writer.flush();
+ writer.close();
+
+import java.io.BufferedReader; /* this lets user read data line by line in addition to
+         character by character which is convenient to users. */
+-----------------------------------
+    BufferedReader br = new BufferedReader(Reader rd);
+    BufferedReader br2 = new BufferedReader(Reader rd, int buffersize);
+
+  Note: BufferedReader can't read directly from File, it has to communicate through some
+       Reader object.
+
+   File file = new File("welcome.txt");
+   FileReader fr = new FileReader(file);
+   BufferedReader br = new BufferedReader(fr);
+   BufferedReader br2 = new BufferedReader(br);
+
+ important methods
+-----------------------
+ 1. int read();
+ 2. read(char[] ch);
+ 3. void close();
+ 4. String newLine();
+
+   string line = br.readLine();
+   while(line!=null){
+     System.out.println(line);
+     line = br.readLine();
+   }
+    br.close();
+
+
+import java.io.PrintWriter;
+   /* This is the most enhanced Writer to write character data to TextFile.*/
+-------------------------------------------------------------------------------
+ PrintWriter pw = new PrintWriter(String filename);
+ PrintWriter pw2 = new PrintWriter(File fileRef);
+ PrintWriter pw3 = new PrintWriter(Writer writer);
+
+Note: PrintWriter can either communicate directly with file or it can communicate via
+        Writer object.
+
+  important methods
+-------------------------
+   write(int ch);
+   write(char[] chs);
+   write(String str);
+   flush();
+   close();
+
+   print(char ch); println();
+   print(int m1);
+   print(double d);
+   print(boolean b);
+   print(String str);
+
+conclusion:
+   Most enhanced Writer to write character data to a File is PrintWriter whereas Most enhanced
+ Reader to read Character data is BufferedReader.
+ 2. we use Writer and Reader to handle character data(Text data)
+ 3. we use Streams to handle Binary Data,
+    FileInputStream is used to read Binary data from file and FileOutputStream is used to write
+    binary data to the File.
+
+
+
+
+
+

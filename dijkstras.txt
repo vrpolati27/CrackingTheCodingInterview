@@ -1,0 +1,23 @@
+undirected weighted
+6
+Hyderabad(A)
+Chennai(B)
+Banglore(C)
+Mumbai(D)
+Delhi(E)
+City13(F)
+Hyderabad(A) Chennai(B) 3
+Hyderabad(A) Banglore(C) 5
+Chennai(B) Banglore(C) 3
+Chennai(B) Mumbai(D) 4
+Banglore(C) Delhi(E) 6
+Chennai(B) Delhi(E) 7
+Banglore(C) Mumbai(D) 2
+Hyderabad(A) Mumbai(D) 9
+Banglore(C) City13(F) 8
+Mumbai(D) Delhi(E) 2
+City13(F) Mumbai(D) 2
+City13(F) Delhi(E) 5
+
+
+

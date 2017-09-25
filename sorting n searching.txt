@@ -1,0 +1,11 @@
+/* Sorting Algorithms */
+
+    1. Bubble Sort  /* done*/
+    2. Selection Sort /* done*/
+    3. Insertion Sort /* done*/
+    4. Merge Sort  /* done*/
+    5. Quick Sort  /* done*/
+    6. Heap Sort   /* */
+    7. Counting Sort /* done*/
+    8. Radix Sort   /* done*/
+    9. Bucket Sort  /* done*/
